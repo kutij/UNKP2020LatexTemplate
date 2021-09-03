@@ -1,0 +1,13 @@
+# Temporal latex files
+*.rar
+*.nav
+*.out
+*.snm
+*.toc
+*.aux
+*.bbl
+*.blg
+*.log
+*.gz
+*.idx
+*.thm
