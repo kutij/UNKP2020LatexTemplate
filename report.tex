@@ -7,39 +7,35 @@
 \usepackage[bottom]{footmisc}% places footnotes at page bottom
 \usepackage{newtxtext}       % 
 \usepackage[varvw]{newtxmath} % selects Times Roman as basic font
+\usepackage{caption}
+\DeclareCaptionLabelFormat{myfig}{#2. ábra}
+\captionsetup[figure]{labelformat={myfig},labelfont=bf}
+\DeclareCaptionLabelFormat{mytable}{#2. táblázat}
+\captionsetup[table]{labelformat={mytable},labelfont=bf}
+\RequirePackage{tikz}
+\usepackage[absolute,overlay]{textpos}
 \makeindex             % used for the subject index
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Data for the title page
 \Address{1034 Budapest, Bécsi út 96/b}
 \TaxID{123456}
-\ContractNumber{UNK2020-AA-BB-11223344}
+\ContractNumber{UNKP2020-AA-BB-11223344}
 \StartDate{2020.09.01.}
 \EndDate{2021.08.31.}
 \Supervisor{Prof. Dr. Pitagórasz} %empty if you hasn't one
-\Logo{}
 \Webpage{www.home.oe} %empty if you hasn't one
 
 \author{Rezső Dezső}
 \title{\Huge Pitagórasz-tétel PYTHONban}
-\subtitle{Életem főműve}
-
-\usepackage{caption}
-
-\DeclareCaptionLabelFormat{myfig}{#2. ábra}
-\captionsetup[figure]{labelformat={myfig},labelfont=bf}
-
-\DeclareCaptionLabelFormat{mytable}{#2. táblázat}
-\captionsetup[table]{labelformat={mytable},labelfont=bf}
-
-\RequirePackage{tikz}
-\usepackage[absolute,overlay]{textpos}
+\subtitle{Életem főműve} %empty if you hasn't one
 
 \begin{document}
 %UNKP logo on the title page
 \begin{textblock*}{0.65\textwidth}(3.659cm,1.72cm)
 	\includegraphics[width=0.7\linewidth]{img/unkp_logo-04}
 \end{textblock*}
-%BARK logo on the title page, change if you don't like it (?)
+%BARK logo on the title page, change if you aren't entitled to use it :D
 \begin{textblock*}{0.74\textwidth}(9.259cm,2.102cm)
 	\includegraphics[width=\textwidth]{img/OEBARKHUNLEFT.pdf}
 \end{textblock*}
