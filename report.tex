@@ -14,6 +14,14 @@
 \captionsetup[table]{labelformat={mytable},labelfont=bf}
 \RequirePackage{tikz}
 \usepackage[absolute,overlay]{textpos}
+% For usage of rotated array with newlines in the cells
+\usepackage{array}
+\usepackage{makecell}
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+\usepackage{blindtext, rotating}
 \makeindex             % used for the subject index
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -68,6 +76,43 @@ Tehát az eredmények szöveges összefoglalására összesen 6 oldal áll rende
 \subsection{Tudományos publikációk}
 
 Az alábbi adatok megadása kötelező: publikáció típusa, címe, DOI azonosító (ha van), szerző(k), folyóirat/kiadvány címe, sorszáma, kiadó, kiadás helye, időpontja, oldalszám, referált kiadvány (I/N), open-access kiadvány (I/N)
+
+A saját megoldásom\footnote{KJ} erre, akinek tetszik, használja:
+
+\hspace{2cm}
+\begin{turn}{90}
+	{\small
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Típus: & konferencia & konferencia & folyóirat (D1) \\
+			\hline
+			Cím: & \makecell{Decreasing the {Computational} \\ {Demand} of {Unscented} {Kalman} \\ {Filter} based {Methods}} & 
+			\makecell{Computational {Analysis} of {Relaxed} \\  {Unscented} {Transformation} in  terms of \\ necessary floating point operations} &  
+			\makecell{Computationally Relaxed \\ Unscented Kalman Filter} \\
+			\hline
+			DOI: & 10.1109/SACI51354.2021.9465610 & 10.1109/INES52918.2021.9512926 & - \\
+			\hline
+			Szerzők: & Kuti J{\'o}zsef, Galambos P{\'e}ter &  Kuti J{\'o}zsef, Galambos P{\'e}ter & \makecell{Kuti József, Rudas Imre,\\ Galambos Péter}  \\
+			\hline
+			Megjelentető: & \makecell{15th {International} {Symposium} on \\  {Applied} {Computational} {Intelligence} \\ and {Informatics} ({SACI})} & 
+			\makecell{25th {International} {Conference}  on\\  {Intelligent} Engineering Systems ({INES})} &
+			\makecell{IEEE Transactions \\ on Cybernetics}  \\
+			\hline
+			Kiadó: & IEEE & IEEE  & IEEE \\
+			\hline
+			Kiadás helye: & Timisoara, Romania & Budapest, Hungary & New York, USA \\
+			\hline
+			Időpontja: & 2021 & 2021 &  - \\
+			\hline
+			Oldalszám: & 181--186  & 55--60 & - \\
+			\hline
+			Referált kiadvány: & Igen & Igen & Igen \\
+			\hline
+			Open-access kiadvány: & Nem  & Nem & Nem \\
+			\hline
+		\end{tabular}
+	}
+\end{turn}
 
 \subsection{Egyéb disszeminációs tevékenységek}
 
